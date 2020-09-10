@@ -2,15 +2,22 @@ import {connect} from 'react-redux';
 import Card from '../Card/Card.jsx';
 import React,{Component} from 'react'
 
-class Container extends Component{
-    constructor(props){
-        super(props);
-    }
+class CardContainer extends Component{
+    
     render(){
-        const data=this.props;
+        const ygoCard = this.props.Card.data;
+        //console.log(ygoCard);
+       if(ygoCard === undefined){
         return(
-            <Card Card={data}></Card>
+            <div>
+                <h1>...</h1>
+            </div>
         )
+       }else{
+        return(
+            <Card Card={ygoCard}></Card>
+        )
+       }
     }
 }
 
@@ -20,4 +27,4 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps,null)(Container)
+export default connect(mapStateToProps,null)(CardContainer)
