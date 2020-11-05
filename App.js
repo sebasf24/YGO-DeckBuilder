@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 import {Provider} from 'react-redux';
-import store from './store';
-import Search from './components/Search/Search';
-import CardContainer from './components/Container/Container';
+import store from './src/store';
+import Search from './src/components/Search/Search';
+import CardContainer from './src/components/Container/Container.js';
 
 function App() {
   return (
