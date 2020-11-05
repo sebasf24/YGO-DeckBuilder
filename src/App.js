@@ -6,6 +6,7 @@ import Search from './components/Search/Search';
 import CardsContainer from './components/Containers/CardsContainer';
 
 function App() {
+  //console.log(document.getElementById('root'))
   return (
     <Provider store={store}>
       <Search></Search>
