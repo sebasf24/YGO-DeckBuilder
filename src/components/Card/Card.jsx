@@ -1,14 +1,13 @@
 import React from 'react';
+import Style from './Card.module.css'
 
 function Card(Card){
     const ygoCard = Card.Card;
         return(
-            <div>
-                <ul>
-                {ygoCard.map(e => 
-                    <li key={e.id}><img src={e.card_images[0].image_url} alt=""/></li>
-                )}
-                </ul>
+            <div className={Style.carta}>
+                <img src={ygoCard.card_images[0].image_url} alt=""/>
+                {/*ygoCard.card_images.map(img => <img src={img.image_url} alt=""/>)*/}
+                {/* <img src={ygoCard.card_images[0].image_url_small} alt=""/> */}
             </div>
         )
     

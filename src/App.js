@@ -3,13 +3,13 @@ import './App.css';
 import {Provider} from 'react-redux';
 import store from './store';
 import Search from './components/Search/Search';
-import CardContainer from './components/Container/Container';
+import CardsContainer from './components/Containers/CardsContainer';
 
 function App() {
   return (
     <Provider store={store}>
       <Search></Search>
-      <CardContainer/>
+      <CardsContainer/>
     </Provider>
   );
 }

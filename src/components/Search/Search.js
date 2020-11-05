@@ -6,10 +6,12 @@ class Search extends Component {
     constructor(props){
         super(props);
         this.state ={
-            nombre: ""
+            nombre: "",
+            arquetipo: false
         };
         /* this.handleSubmit=this.handleSubmit.bind(this);
         this.handleChange=this.handleChange.bind(this); */
+        this.isCheck=this.isCheck.bind(this);
 
     }
 
@@ -20,14 +22,24 @@ class Search extends Component {
         event.preventDefault();
         this.props.getCards(this.state.title);
     } */
+    
+    isCheck(value){
+        if(value){
+            this.setState({arquetipo: true});
+        }else{
+            this.setState({arquetipo: false})
+        }
+    }
 
     render(){
         return(
             <div>
-                <h1>Buscador</h1>
+                <h1 style={{color: "lightblue" }}>Buscador</h1>
                 <form onSubmit={e =>{e.preventDefault();
-                     this.props.getCards(this.state.nombre)}}>
+                //{console.log(this.state.arquetipo)}
+                     this.props.getCards(this.state.nombre,this.state.arquetipo)}}>
                     <input type="text" onChange={e =>{ this.setState({nombre: e.target.value})} }></input>
+                    <label style={{color: "lightblue" }}><input type="checkbox" id="cbox1" onChange={e =>{this.isCheck(e.target.checked)}}/>Buscar por Arquetipo</label>
                     <button type="submit">Buscar</button>
                 </form>
             </div>
@@ -38,7 +50,7 @@ class Search extends Component {
 
 function mapDispatchToProps(dispatch){
     return{
-        getCards: card => dispatch(getCards(card))
+        getCards: (card,archetype) => dispatch(getCards(card,archetype))
     }
 }
 
