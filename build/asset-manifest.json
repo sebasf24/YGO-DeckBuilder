@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/YGO-DeckBuilder/static/css/main.fd71a97e.chunk.css",
+    "main.js": "/YGO-DeckBuilder/static/js/main.6516a8f7.chunk.js",
+    "main.js.map": "/YGO-DeckBuilder/static/js/main.6516a8f7.chunk.js.map",
+    "runtime-main.js": "/YGO-DeckBuilder/static/js/runtime-main.87c27ed0.js",
+    "runtime-main.js.map": "/YGO-DeckBuilder/static/js/runtime-main.87c27ed0.js.map",
+    "static/js/2.ea8ec556.chunk.js": "/YGO-DeckBuilder/static/js/2.ea8ec556.chunk.js",
+    "static/js/2.ea8ec556.chunk.js.map": "/YGO-DeckBuilder/static/js/2.ea8ec556.chunk.js.map",
+    "index.html": "/YGO-DeckBuilder/index.html",
+    "precache-manifest.dc347e994937e43b12063ba8051d8000.js": "/YGO-DeckBuilder/precache-manifest.dc347e994937e43b12063ba8051d8000.js",
+    "service-worker.js": "/YGO-DeckBuilder/service-worker.js",
+    "static/css/main.fd71a97e.chunk.css.map": "/YGO-DeckBuilder/static/css/main.fd71a97e.chunk.css.map",
+    "static/js/2.ea8ec556.chunk.js.LICENSE.txt": "/YGO-DeckBuilder/static/js/2.ea8ec556.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.87c27ed0.js",
+    "static/js/2.ea8ec556.chunk.js",
+    "static/css/main.fd71a97e.chunk.css",
+    "static/js/main.6516a8f7.chunk.js"
+  ]
+}
