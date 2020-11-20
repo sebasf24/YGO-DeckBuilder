@@ -7,6 +7,7 @@ import CardsContainer from './components/Containers/CardsContainer';
 
 function App() {
   //console.log(document.getElementById('root'))
+  //asdasdd
   return (
     <Provider store={store}>
       <Search></Search>
