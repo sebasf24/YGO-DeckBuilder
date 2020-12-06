@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/YGO-DeckBuilder/precache-manifest.376ad33d9574c883596edfaf36a29a2b.js"
+  "/YGO-DeckBuilder/precache-manifest.b2790769f09035f556d0bdf3e7f673f0.js"
 );
 
 self.addEventListener('message', (event) => {
