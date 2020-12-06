@@ -1,0 +1,23 @@
+.SearchContainer{
+    align-items: center;
+    width: 80%;
+    display: grid;
+    height: 100%;
+    grid-template-rows: 0.7fr 4fr;
+    grid-template-areas: 
+    "SearchBar" 
+    "CardsContainer";
+    
+    
+}
+.SearchBar{
+    grid-area: SearchBar;
+}
+
+.CardsContainer{
+    grid-area: CardsContainer;
+    height: 82vh;
+    border-radius: 10px;
+    background-color: rgba(173,216,230,.4);
+}
+

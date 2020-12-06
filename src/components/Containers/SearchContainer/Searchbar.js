@@ -1,8 +1,8 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
-import {getCards} from '../../actions';
+import {getCards} from '../../../Redux/actions';
 
-class Search extends Component {
+class Searchbar extends Component {
     constructor(props){
         super(props);
         this.state ={
@@ -33,7 +33,7 @@ class Search extends Component {
 
     render(){
         return(
-            <div>
+            <div style={{height:"80%"}}>
                 <h1 style={{color: "lightblue" }}>Buscador</h1>
                 <form onSubmit={e =>{e.preventDefault();
                 //{console.log(this.state.arquetipo)}
@@ -54,4 +54,4 @@ function mapDispatchToProps(dispatch){
     }
 }
 
-export default connect(null,mapDispatchToProps)(Search);
+export default connect(null,mapDispatchToProps)(Searchbar);
