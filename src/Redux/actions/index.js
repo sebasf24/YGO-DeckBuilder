@@ -1,4 +1,4 @@
-import {GET_CARDS,ADD_CARD,DELETE_CARD} from "../constants/constants.js"
+import {GET_CARDS,ADD_CARD,DELETE_CARD,ADD_CARDEDECK,DELETE_CARDEDECK,NUMBER_OFCARD} from "../constants/constants.js"
 import axios from 'axios'
 
 export function getCards(nombre,arquetipo){
@@ -23,7 +23,18 @@ export function addCardToDeck(card){
   return {type: ADD_CARD, card}
 }
 
+export function addCardToExtraDeck(card){
+  return {type: ADD_CARDEDECK, card}
+}
+
 export function deleteCardDeck(card){
   return {type: DELETE_CARD, card}
 }
 
+export function obtainNumberOfCard(card){
+  return {type: NUMBER_OFCARD, card}
+}
+
+export function deleteCardExtraDeck(card){
+  return {type: DELETE_CARDEDECK, card}
+}

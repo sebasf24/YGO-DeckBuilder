@@ -3,7 +3,9 @@
     flex-wrap: wrap;
     max-height: 82vh;
     overflow-y:auto;
+    overflow-x: hidden;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 /* width */

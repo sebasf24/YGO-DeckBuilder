@@ -1,7 +1,9 @@
-import {GET_CARDS,ADD_CARD,DELETE_CARD} from '../constants/constants.js';
+import {GET_CARDS,ADD_CARD,DELETE_CARD,ADD_CARDEDECK,DELETE_CARDEDECK,NUMBER_OFCARD} from '../constants/constants.js';
 const initialState ={
     CardsLoaded: [],
-    Deck:[]
+    Deck:[],
+    extraDeck:[],
+    numberOfCard:0
 }
 /* function removeItemOnce(arr, value) {
     var index = arr.indexOf(value);
@@ -33,23 +35,61 @@ export default (state = initialState,action) =>{
                 }
             }
 
+        case ADD_CARDEDECK:
+            {
+                return{
+                    ...state,
+                    extraDeck: state.extraDeck.concat(action.card)
+                }
+            }
+
+        case NUMBER_OFCARD:
+            {
+
+                return{
+                    ...state,
+                    numberOfCard: (state.Deck.filter( card => card.name !== action.card.name)).length
+
+                }
+            }
+
         case DELETE_CARD:
             {
 
-                var index = state.Deck.indexOf(action.card);
-                var deckfiltered=state.Deck;
+                let index = state.Deck.indexOf(action.card);
+                let deckfiltered=state.Deck;
                 if (index > -1) {
                     deckfiltered.splice(index, 1);
                 }
 
-                console.log("DECKFILTERED",deckfiltered)
+                //console.log("DECKFILTERED",deckfiltered)
                 state.Deck=deckfiltered;
-                console.log("STATE.DECK",state.Deck)
+                //console.log("STATE.DECK",state.Deck)
                 
                 
                 return{
                     ...state,
                     Deck: state.Deck.splice(0,state.Deck.length)
+                }
+            }
+
+            case DELETE_CARDEDECK:
+            {
+
+                let index = state.extraDeck.indexOf(action.card);
+                let extraDeckFiltered=state.extraDeck;
+                if (index > -1) {
+                    extraDeckFiltered.splice(index, 1);
+                }
+
+                //console.log("DECKFILTERED",deckfiltered)
+                state.extraDeck=extraDeckFiltered;
+                //console.log("STATE.extraDECK",state.extraDeck)
+                
+                
+                return{
+                    ...state,
+                    extraDeck: state.extraDeck.splice(0,state.extraDeck.length)
                 }
             }
            

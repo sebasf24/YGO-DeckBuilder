@@ -18,10 +18,16 @@
 .Deck{
     height: 82vh;
     grid-area: Deck;
-    border-radius: 10px;
+    
     background-color: rgba(173,216,230,.4);
 }
 
-.deckextra{
-    grid-area: deckextra;
+.extraDeck{
+    position: absolute;
+    top: 97vh;
+    height: 27vh;
+    width: 40vw;
+    border-radius: 10px;
+    background-color: rgba(173,216,230,.4);
+    
 }

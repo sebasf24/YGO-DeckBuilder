@@ -11,7 +11,7 @@ export default function SearchContainer(){
     return(
         <div className={Style.SearchContainer}>
             <div className={Style.SearchBar}><SearchBar/></div>
-            <div className={Style.CardsContainer}><CardsContainer ygoCards={CardsLoaded} search={true}/></div>
+            <div className={Style.CardsContainer}><CardsContainer ygoCards={CardsLoaded} from={"search"}/></div>
         </div>
     )
 }
